@@ -6,7 +6,7 @@ from .models import Game, Robot, Rubbish
 from .serializers import StartSerializer, RobotSerializer, RubbishSerializer, GameSerializer
 from .utils import generate_random_robots, generate_random_rubbish
 
-from .runner import start, stop, is_running
+from .runner import start, stop
 from . import variables
 
 def GenericResponse(status, message, data=None):
@@ -74,6 +74,6 @@ class GetMapView(APIView):
         if (elapsed < variables.waiting_time / 1000):
             return GenericResponse(429, "You should wait to make another call")
         variables.last_call = datetime.now()
-        if (not is_running):
+        if (not variables.is_running):
             return MapResponse("Game finished")
         return MapResponse("Game is running")

@@ -1,4 +1,3 @@
-waiting_time = 10000 #In milliseconds
+waiting_time = 1000 #In milliseconds
 last_call = None
 is_running = False
-thread = None
