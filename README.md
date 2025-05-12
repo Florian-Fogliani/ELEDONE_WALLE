@@ -2,7 +2,7 @@
 
 ## Prérequis
 
-- Python (3.8 ou supérieur recommandé)
+- Python 
 - pip
 - PostgreSQL
 - (Optionnel mais recommandé) Environnement virtuel : `venv`
@@ -51,8 +51,3 @@
    - `/map`
 
 ---
-
-## Remarques
-
-- N'oubliez pas de configurer correctement vos variables d'environnement si nécessaire (`.env`, `settings.py`, etc.).
-- Pour un environnement de production, pensez à utiliser `gunicorn`, `nginx`, et des outils de gestion de base de données sécurisés.
