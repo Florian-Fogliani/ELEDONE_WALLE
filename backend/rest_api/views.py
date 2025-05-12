@@ -70,7 +70,6 @@ class GetMapView(APIView):
         if (variables.last_call == None):
             return GenericResponse(401, "Game not started")
         elapsed = (datetime.now() - variables.last_call).total_seconds()
-        print(elapsed)
         if (elapsed < variables.waiting_time / 1000):
             return GenericResponse(429, "You should wait to make another call")
         variables.last_call = datetime.now()
